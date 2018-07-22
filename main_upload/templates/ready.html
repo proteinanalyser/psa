@@ -1,0 +1,28 @@
+{% load staticfiles %} 
+<link rel="stylesheet" type="text/css" href="{% static 'css/results.css' %}">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.min.js"></script>
+
+<div class="resultsContainer hide">
+    <div class="contentContainer">
+        <div class="chartContainer">
+            <canvas width="100vw" height="25vh" id="chart"></canvas>
+        </div>
+        <div class="statsContainer">
+            <div class="tableContainer">
+                <div class="tableContent">
+                    <table cellspacing="0" cellpadding="0" class="resultsTable">
+                        <tr style="background-color: #1abc9c" class="structuresContainer">
+                            <th class="structures"></th>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <div class="exportContainer">
+               <a href="{% static 'temp/condensed.xlsx' %}" ><i  class="fa fa-file"></i> &nbsp; Export Condensed Version &nbsp;</a>  
+               <a href="{% static 'temp/detailed.xlsx' %}" style="margin-left: 20px"><i class="fa fa-file"></i> &nbsp; Export Detailed Version</a> 
+            </div>
+        </div>
+    </div>
+
+</div>
+

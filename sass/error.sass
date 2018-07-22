@@ -1,0 +1,101 @@
+.blackContainer 
+  width: 100% 
+  height: 100vh 
+  background: black 
+  opacity: 0.8
+  position: fixed
+  z-index: 1000
+  transition: all 300ms ease
+
+.errorContainer
+  width: 100% 
+  height: 100vh 
+  display: flex 
+  justify-content: center 
+  align-items: center
+  position: fixed
+  z-index: 2000
+  transition: all 300ms ease
+  
+  .errorDialog 
+    width: 300px 
+    height: 350px
+    background: white 
+    border-radius: 2px
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23)
+    display: flex
+    flex-direction: column
+    justify-content: center 
+    align-items: center 
+    text-align: center
+    .icon 
+      font-size: 70px 
+      color: $errorColor 
+    span 
+      margin: 15px 0 
+    .msg 
+      width: 80%
+      font-size: 12px
+    .tryAgainBtn 
+      padding: 10px 20px 
+      border: 2px solid $errorColor 
+      cursor: pointer 
+      transition: all 300ms ease 
+      color: $errorColor
+      border-radius: 20px
+      margin-top: 20px
+      &:hover 
+        background: $errorColor
+        color: white
+
+.warningContainer
+  width: 100% 
+  height: 100vh 
+  z-index: 3000 
+  display: flex 
+  position: absolute
+  justify-content: center 
+  align-items: center
+  transition: all 200ms ease
+  
+  .dialogContainer 
+    width: 30% 
+    min-width: 400px 
+    height: 50vh 
+    display: flex
+    flex-direction: column
+    background: white 
+    @include shadow
+    .symbolContainer
+      width: 100% 
+      height: 60% 
+      background: #f39c12
+      color: white 
+      font-size: 50px 
+      display: flex 
+      align-items: center 
+      justify-content: center 
+    .messageContainer
+      width: 100% 
+      display: flex
+      justify-content: space-around
+      font-size: 12px
+      height: 25%
+      span 
+        width: 90%
+        margin-top: 20px
+    .optionsContainer
+      width: 100% 
+      display: flex 
+      flex-direction: row 
+      justify-content: flex-end
+      .btn 
+        cursor: pointer 
+        margin: 0 10px 
+        color: $uploadText
+        font-size: 20px 
+
+      .confirmSubmit:hover
+        color: #2ecc71
+      .cancelSubmit:hover
+        color: $errorColor

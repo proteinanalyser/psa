@@ -1,0 +1,124 @@
+.resultsContainer {
+  width: 100%;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column; }
+  .resultsContainer .contentContainer {
+    width: 100%;
+    height: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center; }
+    .resultsContainer .contentContainer .chartContainer {
+      width: 100%;
+      height: 70vh;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+      position: relative; }
+      .resultsContainer .contentContainer .chartContainer canvas {
+        padding-top: 20px;
+        width: 100%;
+        color: white;
+        background: #2c3e50;
+        -webkit-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+        box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23); }
+    .resultsContainer .contentContainer .statsContainer {
+      width: 100%;
+      height: 90%;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+      flex-direction: column;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+      padding-top: 50px; }
+      .resultsContainer .contentContainer .statsContainer .tableContainer {
+        width: 90%;
+        overflow-x: auto;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: start;
+        -ms-flex-pack: start;
+        justify-content: flex-start; }
+        .resultsContainer .contentContainer .statsContainer .tableContainer .tableContent {
+          min-width: 300px;
+          -webkit-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+          box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23); }
+          .resultsContainer .contentContainer .statsContainer .tableContainer .tableContent .resultsTable {
+            background: #ecf0f1; }
+            .resultsContainer .contentContainer .statsContainer .tableContainer .tableContent .resultsTable .structures {
+              min-width: 100px;
+              color: #27ae60; }
+            .resultsContainer .contentContainer .statsContainer .tableContainer .tableContent .resultsTable tr th {
+              font-weight: 300;
+              color: #7f8c8d;
+              border-bottom: 1px solid #dcdde1;
+              padding: 5px; }
+            .resultsContainer .contentContainer .statsContainer .tableContainer .tableContent .resultsTable .tableTitle {
+              font-weight: 500;
+              color: #3d3d3d; }
+      .resultsContainer .contentContainer .statsContainer .exportContainer {
+        width: 90%;
+        color: #3498db;
+        font-size: 12px;
+        margin-top: 20px;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+        flex-direction: row;
+        -webkit-box-pack: start;
+        -ms-flex-pack: start;
+        justify-content: flex-start;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center; }
+        .resultsContainer .contentContainer .statsContainer .exportContainer .optionsContainer {
+          margin-left: 30px;
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: flex;
+          -webkit-box-orient: horizontal;
+          -webkit-box-direction: normal;
+          -ms-flex-direction: row;
+          flex-direction: row; }
+          .resultsContainer .contentContainer .statsContainer .exportContainer .optionsContainer .btn {
+            padding: 10px 20px;
+            border-radius: 50px;
+            cursor: pointer;
+            background: #1abc9c;
+            margin: 0 10px;
+            color: white;
+            border: 1px solid #1abc9c;
+            -webkit-transition: all 100ms ease;
+            -o-transition: all 100ms ease;
+            transition: all 100ms ease; }
+            .resultsContainer .contentContainer .statsContainer .exportContainer .optionsContainer .btn:hover {
+              background: none;
+              color: #1abc9c; }

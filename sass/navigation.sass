@@ -1,0 +1,53 @@
+nav
+  width: 100% 
+  height: $navHeight
+  position: fixed
+  top: 0 
+  display: flex 
+  align-items: center 
+  flex-direction: row 
+  z-index: 10000
+  transition: all 300ms ease
+  .iconsContainer 
+    width: 20%
+    img
+      width: 60px 
+      height: auto 
+      padding: 0 20px
+      opacity: 0 
+      visibility: hidden
+      transition: all 100ms ease
+      cursor: pointer
+  .optionsContainer 
+    width: 80% 
+    display: flex 
+    flex-direction: row-reverse    
+    ul 
+      display: flex 
+      flex-direction: row 
+
+      li 
+        padding: 10px 20px 
+        cursor: pointer 
+        color: $navTextColor
+        transition: all 100ms ease
+        &:last-child 
+          padding-right: 40px
+        &:hover 
+          color: $navTextColorHover
+          
+.activatedNavResuts
+  background: $navBackground
+  .iconsContainer 
+    img 
+      opacity: 1
+      visibility: visible
+
+.activatedNav 
+  background: $navBackground
+  .iconsContainer 
+    img 
+      opacity: 1
+      visibility: visible
+
+

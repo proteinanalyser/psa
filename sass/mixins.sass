@@ -1,0 +1,23 @@
+@mixin centerHor
+  left: 50%
+  transform: translateX(-50%)
+
+
+@mixin centerVer
+  top: 50%
+  transform: translateY(-50%)
+
+
+@mixin centerHorVer
+  top: 50%
+  left: 50%
+  transform: translate(-50%, -50%)
+
+@mixin shadow
+  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23)
+
+
+@mixin mQ($arg)
+  @media screen and (max-width: $arg)
+    @content
+  

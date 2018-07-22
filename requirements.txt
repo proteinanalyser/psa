@@ -1,0 +1,14 @@
+Keras
+numpy
+pandas
+tensorflow
+gunicorn
+django
+bleach
+psycopg2
+dj-database-url
+dj-static
+python-decouple
+whitenoise
+djangorestframework
+h5py

@@ -1,0 +1,50 @@
+{% load staticfiles %}
+<form id="uploadForm" action="{% url 'upload' %}" enctype="multipart/form-data" method="post">
+  <div class="uploadContainer">
+    <div class="contentContainer">
+      <h1>Upload your template file containing your Circular Dichroism signal</h1>
+      {% csrf_token %}
+      <input type="file" name="uploadFile" id="uploadFile">
+      <label for="uploadFile">
+        <div class="uploadBtn">
+          <span class="fa fa-upload"></span>
+        </div>
+      </label>
+      <small>
+        <a href="{% static 'download/template.xlsx' %}">Download the template file</a>
+      </small>
+      <a href="{% static 'download/template.xlsx' %}">
+        <img src="https://res.cloudinary.com/dffifnsyc/image/upload/v1530740268/excel.png" alt="">
+      </a>
+    </div>
+    <div class="submitContainer nextRight">
+      <input id="subBtn" type="submit" value="ANALISAR">
+      <h1>It's all ready to start! Click to continue to the analysis</h1>
+
+      <div class="warningContainer hide">
+        <div class="dialogContainer">
+          <div class="symbolContainer">
+            <span class="fa fa-exclamation-triangle"></span>
+          </div>
+          <div class="messageContainer">
+            <span> &nbsp; Please be aware that the model used in this platform still lacks validations. </span>
+          </div>
+          <div class="optionsContainer">
+              <label for="subBtn">
+                <div title="Analyse CD Spectrum" class=" btn confirmSubmit">
+                  <span>SUBMIT</span>
+                </div>
+              </label>
+            <div class="btn cancelSubmit">
+              <span>DO NOT SUBMIT</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+      <div title="Analyse CD Spectrum" class="submitBtn">
+        <i class="fa fa-chevron-right"></i>
+      </div>
+    </div>
+  </div>
+</form>

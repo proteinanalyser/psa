@@ -1,0 +1,89 @@
+{%extends 'base.html'%} {% load staticfiles %} {% block title%}PSA - Instructions{% endblock %} {% block body %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/instructions.css' %}">
+<script src="{% static 'js/instructions.js' %}"></script>
+
+<header>
+    <span class="fa fa-exclamation-circle"></span>
+    <h2>Please read the instructions before performing the analysis</h2>
+</header>
+<section id="instructions">
+    <div class="instructionContainer">
+        <div class="stepNumberContainer">
+            1
+        </div>
+        <span class="text">Download the template file and fill it with the Circular Dichroism spectra. Choose the sample name that has a meaning
+            for you
+        </span>
+        <span class="goRules">SEE THE RULES</span>
+    </div>
+    <div class="instructionContainer">
+        <div class="stepNumberContainer">
+            2
+        </div>
+        <span class="text">Upload the template file to the platform and click the analysis button to start the file processing and spectra analysis
+        </span>
+    </div>
+    <div class="instructionContainer">
+        <div class="stepNumberContainer">
+            3
+        </div>
+        <span class="text">A results page will be displayed with the condensed data information. Both condensed and detailed data can be exported
+            into an excel file.
+        </span>
+    </div>
+</section>
+<section id="rules">
+    <div class="allRulesContainer">
+        <div class="row">
+            <div class="ruleContainer">
+                    <div class="iconContainer">
+                            <img src="https://res.cloudinary.com/dffifnsyc/image/upload/v1531494134/wavelength.png" alt="">
+                    </div>
+                <div class="text">
+                    Use spectra with a wavelength between 190 and 250 nm 
+                </div>
+            </div>
+            <div class="ruleContainer">
+                    <div class="iconContainer">
+                            <img src="https://res.cloudinary.com/dffifnsyc/image/upload/v1531494134/extension.png" alt="">
+                    </div>
+                <div class="text">
+                    Use the extension file ".xlsx"
+                </div>
+            </div>
+            <div class="ruleContainer">
+                    <div class="iconContainer">
+                            <img src="https://res.cloudinary.com/dffifnsyc/image/upload/v1531494134/name.png" alt="">
+                    </div>
+                <div class="text">
+                    Do not change the name of the file
+                </div>
+            </div>
+            <div class="ruleContainer">
+                <div class="iconContainer">
+                        <img src="https://res.cloudinary.com/dffifnsyc/image/upload/v1531494134/sheet.png" alt="">
+                </div>
+                <div class="text">
+                    Do not add any excel sheet
+                </div>
+            </div>
+            <div class="ruleContainer">
+                    <div class="iconContainer">
+                            <img src="https://res.cloudinary.com/dffifnsyc/image/upload/v1531494134/sheetName.png" alt="">
+                    </div>
+                <div class="text">
+                    Do not change the name of the excel sheet
+                </div>
+            </div>
+            <div class="ruleContainer">
+                    <div class="iconContainer">
+                            <img src="https://res.cloudinary.com/dffifnsyc/image/upload/v1531494134/row.png" alt="">
+                    </div>
+                <div class="text">
+                    Do not add or delete any rows in the excel file
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

@@ -1,0 +1,44 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html>
+<head>
+ 
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <link rel="shortcut icon" href="https://res.cloudinary.com/dffifnsyc/image/upload/v1530725405/favicon.ico" type="image/x-icon" />
+  <title>  {% block title %}{%endblock%}</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="{% static 'css/styles.css' %}">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900" rel="stylesheet">
+</head>
+<body>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://use.fontawesome.com/c633fd4a23.js"></script>
+    <script src="{% static 'js/base.js' %}"></script>
+  <nav>
+      <div class="iconsContainer">
+        <img src="https://res.cloudinary.com/dffifnsyc/image/upload/v1530720188/logo.png" alt="">
+      </div>
+      <div class="optionsContainer">
+        <ul>
+          <li class="navItem"> <a href="{% url 'index' %}"><span class="fa fa-home"></span> &nbsp; Home</a> </li>
+          <li class="navItem"> <a href="{% url 'instructions' %}"><span class="fa fa-info-circle"></span> &nbsp; Instructions</a> </li>
+          <li class="navItem"> <a href="{% url 'work' %}"><span class="fa fa-graduation-cap"></span> &nbsp; How it Works</a> </li>
+        </ul>
+      </div>
+  </nav>
+  {% include "file_error.html" %}
+  {%block body%}
+  {%endblock%}
+  <footer>
+    <div class="institutionsContainer">
+      <a href="https://www.ceb.uminho.pt/" target="_blank"><img src="https://www.ceb.uminho.pt/Content/images/logoceb.png"></a>
+      <a href="https://www.uminho.pt" target="_blank"><img class="resize" src="http://www.saudeoral.pt/wp-content/uploads/sites/6/2015/09/Universidade_do_Minho.png"></a>
+      <a href="https://www.eng.uminho.pt/" target="_blank"><img class="resize" src="http://www.dps.uminho.pt/images/EditorTexto/um_eeng.jpg"></a>
+    </div>
+    <div class="copyrightContainer">
+      <small>© Copyright 2018 | Created by Daniel Madalena</small>
+    </div>
+  </footer>
+</body>
+</html>

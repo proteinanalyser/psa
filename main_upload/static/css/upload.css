@@ -1,0 +1,367 @@
+.blackContainer {
+  width: 100%;
+  height: 100vh;
+  background: black;
+  opacity: 0.8;
+  position: fixed;
+  z-index: 1000;
+  -webkit-transition: all 300ms ease;
+  -o-transition: all 300ms ease;
+  transition: all 300ms ease; }
+
+.errorContainer {
+  width: 100%;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  position: fixed;
+  z-index: 2000;
+  -webkit-transition: all 300ms ease;
+  -o-transition: all 300ms ease;
+  transition: all 300ms ease; }
+  .errorContainer .errorDialog {
+    width: 300px;
+    height: 350px;
+    background: white;
+    border-radius: 2px;
+    -webkit-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    text-align: center; }
+    .errorContainer .errorDialog .icon {
+      font-size: 70px;
+      color: #e74c3c; }
+    .errorContainer .errorDialog span {
+      margin: 15px 0; }
+    .errorContainer .errorDialog .msg {
+      width: 80%;
+      font-size: 12px; }
+    .errorContainer .errorDialog .tryAgainBtn {
+      padding: 10px 20px;
+      border: 2px solid #e74c3c;
+      cursor: pointer;
+      -webkit-transition: all 300ms ease;
+      -o-transition: all 300ms ease;
+      transition: all 300ms ease;
+      color: #e74c3c;
+      border-radius: 20px;
+      margin-top: 20px; }
+      .errorContainer .errorDialog .tryAgainBtn:hover {
+        background: #e74c3c;
+        color: white; }
+
+.warningContainer {
+  width: 100%;
+  height: 100vh;
+  z-index: 3000;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: absolute;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-transition: all 200ms ease;
+  -o-transition: all 200ms ease;
+  transition: all 200ms ease; }
+  .warningContainer .dialogContainer {
+    width: 30%;
+    min-width: 400px;
+    height: 50vh;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    background: white;
+    -webkit-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23); }
+    .warningContainer .dialogContainer .symbolContainer {
+      width: 100%;
+      height: 60%;
+      background: #f39c12;
+      color: white;
+      font-size: 50px;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      justify-content: center; }
+    .warningContainer .dialogContainer .messageContainer {
+      width: 100%;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -ms-flex-pack: distribute;
+      justify-content: space-around;
+      font-size: 12px;
+      height: 25%; }
+      .warningContainer .dialogContainer .messageContainer span {
+        width: 90%;
+        margin-top: 20px; }
+    .warningContainer .dialogContainer .optionsContainer {
+      width: 100%;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+      flex-direction: row;
+      -webkit-box-pack: end;
+      -ms-flex-pack: end;
+      justify-content: flex-end; }
+      .warningContainer .dialogContainer .optionsContainer .btn {
+        cursor: pointer;
+        margin: 0 10px;
+        color: #3498db;
+        font-size: 20px; }
+      .warningContainer .dialogContainer .optionsContainer .confirmSubmit:hover {
+        color: #2ecc71; }
+      .warningContainer .dialogContainer .optionsContainer .cancelSubmit:hover {
+        color: #e74c3c; }
+
+header {
+  width: 100%;
+  height: 100vh;
+  background-image: url("https://res.cloudinary.com/dffifnsyc/image/upload/v1530731369/header.jpg");
+  background-size: auto 100vh;
+  background-attachment: fixed;
+  background-position: right top;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  position: relative; }
+  header .mainIconContainer {
+    margin-left: 80px; }
+  header .goUploadContainer {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    transform: translateX(-50%);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    color: #c62828;
+    cursor: pointer;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-transition: all 300ms ease;
+    -o-transition: all 300ms ease;
+    transition: all 300ms ease; }
+    header .goUploadContainer span {
+      font-size: 24px;
+      text-align: center; }
+    header .goUploadContainer:hover {
+      bottom: 30px;
+      color: white; }
+
+.uploadContainer {
+  width: 100%;
+  height: 100vh;
+  background: url("https://res.cloudinary.com/dffifnsyc/image/upload/v1530786634/cd_shape.png");
+  background-position: center bottom;
+  background-repeat: no-repeat;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  padding-top: 50px;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  position: relative;
+  -webkit-transition: all 300ms ease;
+  -o-transition: all 300ms ease;
+  transition: all 300ms ease; }
+  .uploadContainer input {
+    visibility: hidden;
+    opacity: 0;
+    z-index: -1; }
+  .uploadContainer h1 {
+    color: #3498db;
+    font-size: 35px;
+    font-weight: 300;
+    text-align: center;
+    max-width: 550px; }
+  .uploadContainer .contentContainer {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-transition: all 300ms ease-in;
+    -o-transition: all 300ms ease-in;
+    transition: all 300ms ease-in; }
+    .uploadContainer .contentContainer form {
+      width: 100px; }
+    .uploadContainer .contentContainer .uploadBtn {
+      width: 100px;
+      height: 100px;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+      color: white;
+      border-radius: 100%;
+      cursor: pointer;
+      background: #3498db;
+      font-size: 50px;
+      -webkit-transition: all 300ms ease-in;
+      -o-transition: all 300ms ease-in;
+      transition: all 300ms ease-in; }
+    .uploadContainer .contentContainer small {
+      color: #3498db;
+      text-decoration: underline;
+      margin: 30px 0;
+      cursor: pointer; }
+  .uploadContainer .submitContainer {
+    height: 50%;
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-transition: all 500ms ease-out;
+    -o-transition: all 500ms ease-out;
+    transition: all 500ms ease-out;
+    position: absolute; }
+    .uploadContainer .submitContainer h1 {
+      -webkit-transition: all 300ms ease;
+      -o-transition: all 300ms ease;
+      transition: all 300ms ease; }
+    .uploadContainer .submitContainer .submitBtn {
+      width: 100px;
+      height: 100px;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+      color: white;
+      border-radius: 100%;
+      cursor: pointer;
+      background: #27ae60;
+      font-size: 40px;
+      -webkit-transition: all 100ms ease;
+      -o-transition: all 100ms ease;
+      transition: all 100ms ease; }
+      .uploadContainer .submitContainer .submitBtn i {
+        transiton: all 200ms ease; }
+      .uploadContainer .submitContainer .submitBtn:hover {
+        -webkit-transform: scale(1.1);
+        -ms-transform: scale(1.1);
+        transform: scale(1.1);
+        background: #27ae60; }
+    .uploadContainer .submitContainer .loadAnimation {
+      width: 30px;
+      height: 30px;
+      background: #f1c40f;
+      -webkit-animation: load 3000ms ease infinite;
+      animation: load 3000ms ease infinite; }
+      .uploadContainer .submitContainer .loadAnimation i {
+        opacity: 0;
+        visibility: hidden; }
+  .uploadContainer .nextLeft {
+    -webkit-transform: translateX(-100%);
+    -ms-transform: translateX(-100%);
+    transform: translateX(-100%); }
+  .uploadContainer .nextRight {
+    -webkit-transform: translateX(100%);
+    -ms-transform: translateX(100%);
+    transform: translateX(100%);
+    opacity: 0;
+    visibility: hidden; }
+
+@-webkit-keyframes load {
+  0% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0); }
+  25% {
+    -webkit-transform: translateX(100px);
+    transform: translateX(100px); }
+  75% {
+    -webkit-transform: translateX(-100px);
+    transform: translateX(-100px); }
+  100% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0); } }
+
+@keyframes load {
+  0% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0); }
+  25% {
+    -webkit-transform: translateX(100px);
+    transform: translateX(100px); }
+  75% {
+    -webkit-transform: translateX(-100px);
+    transform: translateX(-100px); }
+  100% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0); } }

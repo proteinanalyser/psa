@@ -1,0 +1,160 @@
+#rules {
+  width: 100%;
+  height: 50vh;
+  background: #dcdde1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center; }
+  #rules .allRulesContainer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -ms-flex-pack: distribute;
+    justify-content: space-around;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center; }
+    #rules .allRulesContainer .row {
+      width: 100%;
+      height: 100%;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -ms-flex-pack: distribute;
+      justify-content: space-around;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+      flex-direction: row; }
+      #rules .allRulesContainer .row:last-child {
+        border-bottom: none; }
+      #rules .allRulesContainer .row .ruleContainer {
+        width: 30%;
+        height: 80%;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center; }
+        #rules .allRulesContainer .row .ruleContainer .iconContainer {
+          width: 100%;
+          height: 20%;
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: flex;
+          -webkit-box-align: end;
+          -ms-flex-align: end;
+          align-items: flex-end;
+          -webkit-box-pack: center;
+          -ms-flex-pack: center;
+          justify-content: center; }
+          #rules .allRulesContainer .row .ruleContainer .iconContainer .icon {
+            width: 70px;
+            height: 70px;
+            border-radius: 100%;
+            background: #3498db; }
+        #rules .allRulesContainer .row .ruleContainer .text {
+          color: #3498db;
+          width: 70%;
+          height: 20%;
+          text-align: center;
+          font-size: 12px;
+          margin-top: 20px; }
+        #rules .allRulesContainer .row .ruleContainer:last-child {
+          border-right: none; }
+
+header {
+  background: #341f97;
+  height: 60vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  color: white;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column; }
+  header span {
+    margin-bottom: 30px;
+    font-size: 70px !important; }
+
+#instructions {
+  height: 40vh;
+  background: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -ms-flex-pack: distribute;
+  justify-content: space-around;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center; }
+  #instructions .instructionContainer {
+    width: 30%;
+    height: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center; }
+    #instructions .instructionContainer .stepNumberContainer {
+      width: 40px;
+      height: 40px;
+      border-radius: 100%;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+      color: white;
+      background: #3498db;
+      margin-bottom: 30px; }
+    #instructions .instructionContainer .text {
+      text-align: justify;
+      width: 80%;
+      margin-bottom: 30px; }
+    #instructions .instructionContainer .goRules {
+      color: #e74c3c;
+      font-weight: 300;
+      font-size: 12px;
+      cursor: pointer; }

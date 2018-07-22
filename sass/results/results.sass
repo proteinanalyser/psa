@@ -1,0 +1,85 @@
+@import '../vars'
+@import '../mixins'
+.resultsContainer
+    width: 100% 
+    height: 100vh
+    display: flex 
+    flex-direction: column
+    .contentContainer
+        width: 100% 
+        height: 100% 
+        display: flex
+        flex-direction: column 
+        justify-content: center 
+        .chartContainer
+            width: 100% 
+            height: 70vh
+            display: flex
+            justify-content: center
+            position: relative
+            canvas 
+                padding-top: 20px
+                width: 100%
+                color: white
+                background: #2c3e50 
+                @include shadow
+        .statsContainer
+            width: 100% 
+            height: 90%
+            display: flex
+            flex-direction: column
+            justify-content: center 
+            align-items: center
+            padding-top: 50px
+            .tableContainer
+                width: 90% 
+                overflow-x: auto 
+                display: flex 
+                justify-content: flex-start
+                .tableContent
+                    min-width: 300px
+                    @include shadow
+                    .resultsTable 
+                        background: $tableBackground     
+                        .structures
+                            min-width: 100px
+                            color: $analyzeBtn
+                        tr 
+                            th 
+                                font-weight: 300
+                                color: $tableTextColor
+                                border-bottom: 1px solid #dcdde1
+                                padding: 5px 
+                        .tableTitle
+                            font-weight: 500
+                            color: $chartColor
+            .exportContainer
+                width: 90% 
+                color: $uploadText
+                font-size: 12px 
+                margin-top: 20px
+                display: flex 
+                flex-direction: row 
+                justify-content: flex-start
+                align-items: center 
+                .optionsContainer
+                    margin-left: 30px 
+                    display: flex 
+                    flex-direction: row 
+                    .btn
+                        padding: 10px 20px 
+                        border-radius: 50px 
+                        cursor: pointer 
+                        background: #1abc9c   
+                        margin: 0 10px               
+                        color: white
+                        border: 1px solid #1abc9c 
+                        transition: all 100ms ease
+                        &:hover 
+                            background: none
+                            color: #1abc9c 
+
+                   
+
+                
+                

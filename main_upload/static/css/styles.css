@@ -1,0 +1,294 @@
+nav {
+  width: 100%;
+  height: 50px;
+  position: fixed;
+  top: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  z-index: 10000;
+  -webkit-transition: all 300ms ease;
+  -o-transition: all 300ms ease;
+  transition: all 300ms ease; }
+  nav .iconsContainer {
+    width: 20%; }
+    nav .iconsContainer img {
+      width: 60px;
+      height: auto;
+      padding: 0 20px;
+      opacity: 0;
+      visibility: hidden;
+      -webkit-transition: all 100ms ease;
+      -o-transition: all 100ms ease;
+      transition: all 100ms ease;
+      cursor: pointer; }
+  nav .optionsContainer {
+    width: 80%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+    -ms-flex-direction: row-reverse;
+    flex-direction: row-reverse; }
+    nav .optionsContainer ul {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+      flex-direction: row; }
+      nav .optionsContainer ul li {
+        padding: 10px 20px;
+        cursor: pointer;
+        color: #c62828;
+        -webkit-transition: all 100ms ease;
+        -o-transition: all 100ms ease;
+        transition: all 100ms ease; }
+        nav .optionsContainer ul li:last-child {
+          padding-right: 40px; }
+        nav .optionsContainer ul li:hover {
+          color: #ff6b6b; }
+
+.activatedNavResuts {
+  background: #040c26; }
+  .activatedNavResuts .iconsContainer img {
+    opacity: 1;
+    visibility: visible; }
+
+.activatedNav {
+  background: #040c26; }
+  .activatedNav .iconsContainer img {
+    opacity: 1;
+    visibility: visible; }
+
+footer {
+  width: 100%;
+  height: 30vh;
+  background: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center; }
+  footer .institutionsContainer {
+    width: 80%;
+    height: 80%;
+    border-bottom: 1px solid #bdc3c7;
+    border-top: 1px solid #bdc3c7;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -ms-flex-pack: distribute;
+    justify-content: space-around;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center; }
+    footer .institutionsContainer img {
+      -webkit-filter: grayscale(100%);
+      filter: grayscale(100%);
+      -webkit-transition: all 200ms ease;
+      -o-transition: all 200ms ease;
+      transition: all 200ms ease; }
+      footer .institutionsContainer img:hover {
+        -webkit-filter: none;
+        filter: none; }
+    footer .institutionsContainer .resize {
+      height: 60px; }
+  footer .copyrightContainer {
+    font-size: 13px;
+    color: #3498db;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    height: 20%; }
+
+.blackContainer {
+  width: 100%;
+  height: 100vh;
+  background: black;
+  opacity: 0.8;
+  position: fixed;
+  z-index: 1000;
+  -webkit-transition: all 300ms ease;
+  -o-transition: all 300ms ease;
+  transition: all 300ms ease; }
+
+.errorContainer {
+  width: 100%;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  position: fixed;
+  z-index: 2000;
+  -webkit-transition: all 300ms ease;
+  -o-transition: all 300ms ease;
+  transition: all 300ms ease; }
+  .errorContainer .errorDialog {
+    width: 300px;
+    height: 350px;
+    background: white;
+    border-radius: 2px;
+    -webkit-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    text-align: center; }
+    .errorContainer .errorDialog .icon {
+      font-size: 70px;
+      color: #e74c3c; }
+    .errorContainer .errorDialog span {
+      margin: 15px 0; }
+    .errorContainer .errorDialog .msg {
+      width: 80%;
+      font-size: 12px; }
+    .errorContainer .errorDialog .tryAgainBtn {
+      padding: 10px 20px;
+      border: 2px solid #e74c3c;
+      cursor: pointer;
+      -webkit-transition: all 300ms ease;
+      -o-transition: all 300ms ease;
+      transition: all 300ms ease;
+      color: #e74c3c;
+      border-radius: 20px;
+      margin-top: 20px; }
+      .errorContainer .errorDialog .tryAgainBtn:hover {
+        background: #e74c3c;
+        color: white; }
+
+.warningContainer {
+  width: 100%;
+  height: 100vh;
+  z-index: 3000;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: absolute;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-transition: all 200ms ease;
+  -o-transition: all 200ms ease;
+  transition: all 200ms ease; }
+  .warningContainer .dialogContainer {
+    width: 30%;
+    min-width: 400px;
+    height: 50vh;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    background: white;
+    -webkit-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23); }
+    .warningContainer .dialogContainer .symbolContainer {
+      width: 100%;
+      height: 60%;
+      background: #f39c12;
+      color: white;
+      font-size: 50px;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      justify-content: center; }
+    .warningContainer .dialogContainer .messageContainer {
+      width: 100%;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -ms-flex-pack: distribute;
+      justify-content: space-around;
+      font-size: 12px;
+      height: 25%; }
+      .warningContainer .dialogContainer .messageContainer span {
+        width: 90%;
+        margin-top: 20px; }
+    .warningContainer .dialogContainer .optionsContainer {
+      width: 100%;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+      flex-direction: row;
+      -webkit-box-pack: end;
+      -ms-flex-pack: end;
+      justify-content: flex-end; }
+      .warningContainer .dialogContainer .optionsContainer .btn {
+        cursor: pointer;
+        margin: 0 10px;
+        color: #3498db;
+        font-size: 20px; }
+      .warningContainer .dialogContainer .optionsContainer .confirmSubmit:hover {
+        color: #2ecc71; }
+      .warningContainer .dialogContainer .optionsContainer .cancelSubmit:hover {
+        color: #e74c3c; }
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+  overflow-x: hidden; }
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none; }
+
+a {
+  text-decoration: none;
+  color: inherit; }
+
+.hide {
+  visibility: hidden;
+  opacity: 0; }

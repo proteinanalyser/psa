@@ -1,0 +1,30 @@
+footer 
+  width: 100% 
+  height: 30vh 
+  background: white
+  display: flex 
+  flex-direction: column
+  align-items: center 
+  .institutionsContainer
+    width: 80% 
+    height: 80%
+    border-bottom: 1px solid $footerBorder
+    border-top: 1px solid $footerBorder
+    display: flex 
+    flex-direction: row 
+    justify-content: space-around
+    align-items: center
+    img 
+
+      filter: grayscale(100%)
+      transition: all 200ms ease
+      &:hover 
+        filter: none
+    .resize
+      height: 60px
+  .copyrightContainer
+    font-size: 13px 
+    color: $uploadText
+    display: flex 
+    align-items: center
+    height: 20%
