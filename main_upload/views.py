@@ -42,12 +42,12 @@ class UploadFileView(generic.ListView):
 
         predictions = self.estimate(np.array(input_attributes), sample_names)
         
-        current_dir = os.path.dirname(os.path.realpath(__file__))
-        detailed_excel= os.path.join(current_dir, "static", "temp", "detailed.xlsx")
-        condensed_excel =  os.path.join(current_dir, "static", "temp", "condensed.xlsx")
+#         current_dir = os.path.dirname(os.path.realpath(__file__))
+#         detailed_excel= os.path.join(current_dir, "static", "temp", "detailed.xlsx")
+#         condensed_excel =  os.path.join(current_dir, "static", "temp", "condensed.xlsx")
         
-        pd.DataFrame.from_dict(predictions).to_excel(detailed_excel)
-        pd.DataFrame.from_dict(self.getSummaryData(predictions)).to_excel(condensed_excel)
+#         pd.DataFrame.from_dict(predictions).to_excel(detailed_excel)
+#         pd.DataFrame.from_dict(self.getSummaryData(predictions)).to_excel(condensed_excel)
         return HttpResponse( json.dumps(predictions))
 
     def get_queryset(self):
