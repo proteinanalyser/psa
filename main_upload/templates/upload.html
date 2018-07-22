@@ -1,6 +1,8 @@
 {%extends 'base.html'%} {% load staticfiles %} {% block title%}PSA{% endblock %}
 {% block body %}
 <link rel="stylesheet" type="text/css" href="{% static 'css/upload.css' %}">
+<script type="text/javascript" src="//unpkg.com/xlsx/dist/shim.min.js"></script>
+<script type="text/javascript" src="//unpkg.com/xlsx/dist/xlsx.full.min.js"></script>
 <script src="{% static 'js/upload.js' %}"></script>
 
 <header id="header">

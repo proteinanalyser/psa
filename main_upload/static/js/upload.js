@@ -5,7 +5,8 @@ $(document).ready(function () {
     }, 800)
   });
 
-  var excelFile
+  var excelFile, detailedChart = {}, sumChart = {}, summuryResults = {};
+  
   $("#uploadFile").change(function (event) {
     files = event.target.files;
     excelFile = files[0];
@@ -73,6 +74,13 @@ $(document).ready(function () {
     );
   })
 
+  $(".exportCondensed").click(function(){
+    exportExcel(sumChart, "condensed_results.xlsx")
+  });
+
+  $(".exportDetailed").click(function(){
+    exportExcel(detailedChart, "detailed_results.xlsx")
+  });
 
   let sendReceivedData = (send_json) => {
     fetch($("#uploadForm").attr("action"), {
@@ -97,7 +105,7 @@ $(document).ready(function () {
     )
   }
 
-  function getCookie(name) {
+  let getCookie = (name) =>{
     var cookieValue = null;
     if (document.cookie && document.cookie !== '') {
       var cookies = document.cookie.split(';');
@@ -113,11 +121,9 @@ $(document).ready(function () {
     return cookieValue;
   }
 
-  function updateGraph(predictions) {
+  let updateGraph = (predictions) => {
     var samples = Object.keys(predictions);
     var structures = Object.keys(predictions[samples[0]]);
-    var detailedChart = {}
-    var summuryResults = {}
     var ctx = document.getElementById("chart").getContext('2d');
     var myChart = new Chart(ctx, {
       type: 'line',
@@ -131,7 +137,6 @@ $(document).ready(function () {
           labels: {
             fontColor: 'white'
           }
-
         },
         scales: {
           yAxes: [{
@@ -166,7 +171,6 @@ $(document).ready(function () {
       }
     }
     var sumStructure = ["alpha_helix", "beta_strand", "random_coil"]
-    var sumChart = {}
     var colors = ["#2ecc71", "#2980b9", "#c0392b", "#e67e22", "#f1c40f", "#16a085", "#8e44ad", "#ED4C67"];
     for (i = 0; i < sumStructure.length; i++) {
       sumChart[sumStructure[i]] = []
@@ -190,8 +194,32 @@ $(document).ready(function () {
     }
     myChart.update();
   }
-})
 
-$(window).on("unload",function(){
-  jQuery.ajax({url:"http://localhost:8000/upload_file/unload/", async:false})
-});
+  let exportExcel = (json, filename) =>{
+    let info = extractedInfo(Object.keys(summuryResults), json);
+    var wb = XLSX.utils.book_new()
+    var ws = XLSX.utils.json_to_sheet(info.exportData, {header: info.header, skipHeader: false});
+    XLSX.utils.book_append_sheet(wb, ws, "Sheet1");
+    XLSX.writeFile(wb, filename)
+  }
+
+  const extractedInfo = (samples, json) =>{
+    let columns = ["Structures"];
+    let data = []
+
+    columns = columns.concat(samples)
+    num_samples = Object.keys(json).length;
+    for(var i = 0; i<num_samples; i++){
+      let results = {}, currentStructure = Object.keys(json)[i];
+      results[columns[0]] = currentStructure;
+      for(var j = 1; j<columns.length; j++){
+        results[columns[j]] = json[currentStructure][j-1]
+      }
+      data.push(results)
+    }
+    return {
+      header: columns, 
+      exportData: data
+    }; 
+  }
+})
