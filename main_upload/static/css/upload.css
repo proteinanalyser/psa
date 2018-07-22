@@ -226,7 +226,7 @@ header {
     text-align: center;
     max-width: 550px; }
   .uploadContainer .contentContainer {
-    width: 100%;
+    width: 100% !important;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;

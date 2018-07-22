@@ -96,8 +96,8 @@ $(document).ready(function () {
       response => response.json()
     ).then(
       results => {
-        $(".uploadContainer").addClass("hide").css({"height":"0", "display":"none"})
-        $(".resultsContainer").removeClass("hide")
+        $(".submitContainer").addClass("nextLeft")
+        $(".resultsContainer").removeClass("nextRight")
         updateGraph(results)
       }
     ).catch(

@@ -4,7 +4,8 @@
 <script type="text/javascript" src="//unpkg.com/xlsx/dist/shim.min.js"></script>
 <script type="text/javascript" src="//unpkg.com/xlsx/dist/xlsx.full.min.js"></script>
 <script src="{% static 'js/upload.js' %}"></script>
-
+<link rel="stylesheet" type="text/css" href="{% static 'css/results.css' %}">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.min.js"></script>
 <header id="header">
   <div class="mainIconContainer">
     <img src="https://res.cloudinary.com/dffifnsyc/image/upload/v1530720189/logo_main.png" alt="">
@@ -16,6 +17,6 @@
 </header>
 <section id="upload">
  {% include 'uploadfile_form.html' %}
- {% include 'ready.html' %}
+
 </section>
 {% endblock %}
